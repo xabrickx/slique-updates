@@ -55,8 +55,8 @@
                     }
                 }
 
-                $dropdown-items: "a#modmail", "a#mail", "ul", ".user", "form.logout";
-                $dropdown-anchors: "a#modmail", "a#mail", "ul a", ".user a", "form.logout a";
+                $dropdown-items: "a#new_modmail", "a#modmail", "a#mail", "ul", ".user", "form.logout";
+                $dropdown-anchors: "a#new_modmail", "a#modmail", "a#mail", "ul a", ".user a", "form.logout a";
 
                 @each $anchor in $dropdown-anchors {
                     & > #{$anchor} {
@@ -84,9 +84,12 @@
                     }
                 }
 
-                #mail, #modmail {
+                #mail, #modmail #new_modmail{
                     text-indent: 0px;
                     height: initial;
+                }
+                #new_modmail{
+                  content: #{$new-modmail-prefix};
                 }
                 .user {
                     margin-top: 50px;
